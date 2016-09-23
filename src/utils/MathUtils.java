@@ -3,10 +3,10 @@ package utils;
 import java.util.Collection;
 
 public class MathUtils {
-    public static int getDispersion(Collection<Double> selection){
-        int sum=0;
+    public static double getDispersion(Collection<Double> selection){
+        double sum=0;
         Double temp;
-        int sampleMean = getSampleMean(selection);
+        double sampleMean = getSampleMean(selection);
         for (Double number:selection) {
             temp= number-sampleMean;
             sum+=temp*temp;
@@ -14,8 +14,8 @@ public class MathUtils {
         return sum/selection.size();
     }
 
-    public static int getSampleMean(Collection<Double> selection){
-        int sum = 0;
+    public static double getSampleMean(Collection<Double> selection){
+        double sum = 0;
         for (Double number: selection) {
             sum+=number;
         }
