@@ -7,6 +7,6 @@ public class ClassicRandom implements MyRandom {
 
     @Override
     public int getRandom() {
-        return random.nextInt(1000);
+        return random.nextInt(100);
     }
 }

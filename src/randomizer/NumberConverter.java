@@ -9,7 +9,7 @@ public class NumberConverter {
         String str = Double.toString(number);
         int i = str.indexOf(".");
         str=str.substring(i+1);
-        if(str.length()>3) str = str.substring(0,3);
+        if(str.length()>2) str = str.substring(0,2);
         return Integer.parseInt(str);
     }
 }
