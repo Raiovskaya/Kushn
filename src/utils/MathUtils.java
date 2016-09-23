@@ -3,7 +3,7 @@ package utils;
 import java.util.Collection;
 
 public class MathUtils {
-    public int getDispersion(Collection<Double> selection){
+    public static int getDispersion(Collection<Double> selection){
         int sum=0;
         Double temp;
         int sampleMean = getSampleMean(selection);
@@ -14,7 +14,7 @@ public class MathUtils {
         return sum/selection.size();
     }
 
-    public int getSampleMean(Collection<Double> selection){
+    public static int getSampleMean(Collection<Double> selection){
         int sum = 0;
         for (Double number: selection) {
             sum+=number;
