@@ -1,12 +1,14 @@
-package randomizer;
+package edu.laba2.random;
 
-public class VonNeumannRandom implements MyRandom {
+import edu.laba2.utils.NumberConverter;
+
+public class VonNeumannRandom implements Randomizer {
     private final double REBOUND_NUMBER = 0.123;
 
     private Double currentNumber = 0.9876;
 
     @Override
-    public int getRandom() {
+    public int getRandomValue() {
         currentNumber = createRandom(currentNumber);
         return NumberConverter.doubleToReturnedInt(currentNumber);
     }
@@ -27,7 +29,6 @@ public class VonNeumannRandom implements MyRandom {
     }
 
     private boolean isZeroExists(String number){
-        if(number.contains("0")) return true;
-        return false;
+        return number.contains("0");
     }
 }

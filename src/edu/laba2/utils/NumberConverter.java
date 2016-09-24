@@ -1,4 +1,4 @@
-package randomizer;
+package edu.laba2.utils;
 
 public class NumberConverter {
     public static double stringToDouble(String number){

@@ -1,6 +1,8 @@
-package randomizer;
+package edu.laba2.random;
 
-public class SquareCongruentialRandom implements MyRandom {
+import edu.laba2.utils.NumberConverter;
+
+public class SquareCongruentialRandom implements Randomizer {
     private final double A = 0.33;
     private final double B = 0.233;
     private final double C = 0.5;
@@ -11,7 +13,7 @@ public class SquareCongruentialRandom implements MyRandom {
     private double currentNumber = 2;
 
     @Override
-    public int getRandom() {
+    public int getRandomValue() {
         currentNumber = M*((A*currentNumber*currentNumber)+(B*currentNumber)+C);
         if (Double.isInfinite(currentNumber)) magicMethod();
         return NumberConverter.doubleToReturnedInt(currentNumber);

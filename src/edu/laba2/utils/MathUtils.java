@@ -1,10 +1,9 @@
-package utils;
+package edu.laba2.utils;
 
 import java.util.Collection;
 
 public class MathUtils {
     public static double getDispersion(Collection<Double> selection){
-        int t;
         double sum=0;
         Double temp;
         double sampleMean = getSampleMean(selection);
